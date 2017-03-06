@@ -1,0 +1,4 @@
+Schedule and Deliverable:
+             Simple world with circular road - Fri 11:30 pm (estimate 2 hr)
+             "On foot" player controls for exploring the simple world - Sat 5 pm (estimate 1 hr)
+             Implement level requirements (billboards + light sources) that would make logical sense - Sat 10 pm (estimate 1 hr)
