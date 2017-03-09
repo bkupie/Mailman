@@ -1,6 +1,6 @@
 Schedule and deliverable:
-	bike object ( alpha )  - Tue by 11 am ( 2 hours)
-	code to for bike       - Tue by 9 pm ( 2 hours)
-        bike  updgrades        - Wed by 10 pm ( 3 hours)
-        aesthetic tweaks       - Thurs by 1 pm ( 1 hours ) 
+	bike object ( alpha )   -   Tue by 11 am ( 2 hours)
+	code to for bike        -   Tue by 9 pm ( 2 hours)
+        bike  updgrades         -   Wed by 10 pm ( 3 hours)
+        aesthetic tweaks        -   Thurs by 1 pm ( 1 hours ) 
 	
