@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class mailBox : MonoBehaviour
 {
-
+    public float score;
+    public UnityEngine.UI.Text scoreText;
     // Use this for initialization
     void Start()
     {
+        score = 10.0f;
+        scoreText.text = "Money: $" + string.Format("{0:.#}", score) + "\nHealth: 10 / 10";
 
     }
 
@@ -20,7 +23,10 @@ public class mailBox : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        score = score + 0.5f;
+        scoreText.text = "Money: $" + string.Format("{0:.#}", score) + "\nHealth: 10 / 10";
         Destroy(col);
+
     }
 
 }

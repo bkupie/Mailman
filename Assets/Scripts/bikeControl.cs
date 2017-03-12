@@ -21,9 +21,9 @@ public class bikeControl : MonoBehaviour {
 		// Shift used as spring, W, A, S, D movement.
 		if (Input.GetKey (KeyCode.LeftShift))
 			rate *= 2;
-		if (Input.GetKey (KeyCode.S))
-			this.GetComponent<Rigidbody>().velocity += this.transform.forward * rate * Time.deltaTime;
 		if (Input.GetKey (KeyCode.W))
+			this.GetComponent<Rigidbody>().velocity += this.transform.forward * rate * Time.deltaTime;
+		if (Input.GetKey (KeyCode.S))
 			this.GetComponent<Rigidbody>().velocity += this.transform.forward * -rate * Time.deltaTime;
 		if (Input.GetKey (KeyCode.D))
 			this.GetComponent<Rigidbody>().rotation *= Quaternion.Euler(0, rotationSpeed * Time.deltaTime, 0);

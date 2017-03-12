@@ -11,20 +11,23 @@ public class MailController : MonoBehaviour
     public GameObject envelope;
     public double projectileSpeed = 1;
 
-    void Start() {
+    void Start()
+    {
 
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         float multipler = speed;
         if (Input.GetKeyDown(KeyCode.Space))
             StartCoroutine(ThrowMail());
-
+        
 
 
     }
-    IEnumerator ThrowMail() {
+    IEnumerator ThrowMail()
+    {
 
         float multipler = speed;
         var mail = GameObject.Instantiate(envelope, this.transform.position + transform.forward * 30 * Time.deltaTime, Quaternion.identity) as GameObject;
@@ -37,7 +40,8 @@ public class MailController : MonoBehaviour
         yield return new WaitForSeconds(lengthOfHold);
         mail.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
-        foreach (var collider in objectCollider) {
+        foreach (var collider in objectCollider)
+        {
             Physics.IgnoreCollision(mail.GetComponent<Collider>(), collider);
         }
 
@@ -47,4 +51,7 @@ public class MailController : MonoBehaviour
 
 
     }
+
 }
+
+  
