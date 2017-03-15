@@ -1,0 +1,6 @@
+This is a modified version of Sebastian Lague's code for path finding.
+
+His repository can be found at 
+
+https://github.com/SebLague/Pathfinding 
+
