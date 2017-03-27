@@ -100,9 +100,9 @@ public class Grid : MonoBehaviour {
 			if (path != null) {
 				foreach (Node n in path) {
                     Gizmos.color = ourColor;
-                    GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                    cube.transform.position = Vector3.one * (nodeDiameter - .1f);
-                    cube.GetComponent<Renderer>().material.color = ourColor;
+                    //GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                    //cube.transform.position = Vector3.one * (nodeDiameter - .1f);
+                   // cube.GetComponent<Renderer>().material.color = ourColor;
                     Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter/5-.1f));
 				}
 			}

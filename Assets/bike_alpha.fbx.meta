@@ -1,0 +1,181 @@
+fileFormatVersion: 2
+guid: 1a445483a33f32841816a9c0c6f41a02
+timeCreated: 1489696368
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bend.001
+    100002: BezierCircle
+    100004: BezierCircle.001
+    100006: BezierCircle.002
+    100008: BezierCircle.003
+    100010: BezierCircle.004
+    100012: //RootNode
+    100014: Camera
+    100016: Cone
+    100018: handlebar.001
+    100020: Lamp
+    100022: lower_bend.004
+    100024: lower_bend.005
+    100026: lower_bend.006
+    100028: lower_bend.007
+    100030: lower_post
+    100032: r_wheel.000
+    100034: r_wheel.001
+    100036: rear_post.000
+    100038: rear_post.001
+    100040: rear_post.003
+    100042: rear_spoke
+    100044: rear_spoke.001
+    400000: bend.001
+    400002: BezierCircle
+    400004: BezierCircle.001
+    400006: BezierCircle.002
+    400008: BezierCircle.003
+    400010: BezierCircle.004
+    400012: //RootNode
+    400014: Camera
+    400016: Cone
+    400018: handlebar.001
+    400020: Lamp
+    400022: lower_bend.004
+    400024: lower_bend.005
+    400026: lower_bend.006
+    400028: lower_bend.007
+    400030: lower_post
+    400032: r_wheel.000
+    400034: r_wheel.001
+    400036: rear_post.000
+    400038: rear_post.001
+    400040: rear_post.003
+    400042: rear_spoke
+    400044: rear_spoke.001
+    2300000: bend.001
+    2300002: BezierCircle
+    2300004: BezierCircle.001
+    2300006: BezierCircle.002
+    2300008: BezierCircle.003
+    2300010: BezierCircle.004
+    2300012: Cone
+    2300014: handlebar.001
+    2300016: lower_bend.004
+    2300018: lower_bend.005
+    2300020: lower_bend.006
+    2300022: lower_bend.007
+    2300024: lower_post
+    2300026: r_wheel.000
+    2300028: r_wheel.001
+    2300030: rear_post.000
+    2300032: rear_post.001
+    2300034: rear_post.003
+    2300036: rear_spoke
+    2300038: rear_spoke.001
+    3300000: bend.001
+    3300002: BezierCircle
+    3300004: BezierCircle.001
+    3300006: BezierCircle.002
+    3300008: BezierCircle.003
+    3300010: BezierCircle.004
+    3300012: Cone
+    3300014: handlebar.001
+    3300016: lower_bend.004
+    3300018: lower_bend.005
+    3300020: lower_bend.006
+    3300022: lower_bend.007
+    3300024: lower_post
+    3300026: r_wheel.000
+    3300028: r_wheel.001
+    3300030: rear_post.000
+    3300032: rear_post.001
+    3300034: rear_post.003
+    3300036: rear_spoke
+    3300038: rear_spoke.001
+    4300000: bend.001
+    4300002: lower_bend.007
+    4300004: rear_post.000
+    4300006: lower_bend.006
+    4300008: lower_bend.005
+    4300010: lower_bend.004
+    4300012: Cone
+    4300014: BezierCircle
+    4300016: lower_post
+    4300018: BezierCircle.001
+    4300020: rear_post.001
+    4300022: rear_post.003
+    4300024: BezierCircle.002
+    4300026: r_wheel.001
+    4300028: r_wheel.000
+    4300030: BezierCircle.003
+    4300032: BezierCircle.004
+    4300034: rear_spoke
+    4300036: handlebar.001
+    4300038: rear_spoke.001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
