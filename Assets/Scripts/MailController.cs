@@ -20,7 +20,7 @@ public class MailController : MonoBehaviour
     void Update()
     {
         float multipler = speed;
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.M))
             StartCoroutine(ThrowMail());
         
 
