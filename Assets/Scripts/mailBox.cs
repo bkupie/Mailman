@@ -14,8 +14,8 @@ public class mailBox : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        score = 10.0f;
-        scoreText.text = "Money: $" + string.Format("{0:.#}", score) + "\nHealth: 10 / 10";
+        score = 10.23f;
+        scoreText.text = "€ " + string.Format("{0:.##}", score);
 
     }
 
@@ -29,7 +29,7 @@ public class mailBox : MonoBehaviour {
     void OnTriggerEnter(Collider col)
     {
         score = score + 0.5f;
-        scoreText.text = "Money: $" + string.Format("{0:.#}", score) + "\nHealth: 10 / 10";
+        scoreText.text = "€ " + string.Format("{0:.##}", score);
         Destroy(col);
         if (type == MailboxType.Military) {
             factionOpinion.setMilitary(true);
