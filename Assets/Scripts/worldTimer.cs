@@ -15,7 +15,7 @@ public class worldTimer : MonoBehaviour {
     void Start () {
         bigPanel = bigPanel.GetComponent<Canvas>();
         image = this.GetComponent<Image>();
-        timeLeft += 5;
+        timeLeft += 10;
         time = timeLeft;
         bigPanel.enabled = true;
     }
@@ -23,9 +23,10 @@ public class worldTimer : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if(time - timeLeft > 5 && bigPanel.enabled)
+        if((time - timeLeft > 40 && bigPanel.enabled) || Input.GetKey(KeyCode.Space))
         {
             bigPanel.enabled = false;
+            timeLeft = time;
         }
         timeLeft -= Time.deltaTime;
         //scoreText.text = "Time left: " + timeLeft + " seconds.";
