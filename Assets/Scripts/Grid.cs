@@ -11,7 +11,7 @@ public class Grid : MonoBehaviour {
     public Color ourColor;// = Color.green;
     public bool rebels;
     public GameObject myArrow;
-
+    public float speed = 5.1f;
 	Node[,] grid;
 
 	float nodeDiameter;
@@ -35,13 +35,15 @@ public class Grid : MonoBehaviour {
     void pointToGizmo()
     {
         Node currentWayPoint = path[0];
-        myArrow.transform.LookAt(currentWayPoint.worldPosition,transform.up);
-   
-        
+        // myArrow.transform.LookAt(currentWayPoint.worldPosition,transform.up);
+        var targetRotation = Quaternion.LookRotation(currentWayPoint.worldPosition - myArrow.transform.position);
+        // Smoothly rotate towards the target point.
+        myArrow.transform.rotation = Quaternion.Slerp(myArrow.transform.rotation, targetRotation, speed * Time.deltaTime);
+
     }
 
 
-	public int MaxSize {
+    public int MaxSize {
 		get {
 			return gridSizeX * gridSizeY;
 		}
@@ -100,9 +102,6 @@ public class Grid : MonoBehaviour {
 			if (path != null) {
 				foreach (Node n in path) {
                     Gizmos.color = ourColor;
-                    //GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                    //cube.transform.position = Vector3.one * (nodeDiameter - .1f);
-                   // cube.GetComponent<Renderer>().material.color = ourColor;
                     Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter/5-.1f));
 				}
 			}
