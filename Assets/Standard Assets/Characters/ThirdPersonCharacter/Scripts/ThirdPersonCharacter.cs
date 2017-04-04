@@ -28,20 +28,39 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		Vector3 m_CapsuleCenter;
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
+        bool m_IsThrowing;
 
 
 		void Start()
 		{
-			m_Animator = GetComponent<Animator>();
+            m_IsThrowing = false;
+            m_Animator = GetComponent<Animator>();
 			m_Rigidbody = GetComponent<Rigidbody>();
 			m_Capsule = GetComponent<CapsuleCollider>();
 			m_CapsuleHeight = m_Capsule.height;
 			m_CapsuleCenter = m_Capsule.center;
-
 			m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 			m_OrigGroundCheckDistance = m_GroundCheckDistance;
 		}
 
+       public void Throw(bool throwing)
+        {
+            m_IsThrowing = throwing;
+            m_Animator.SetBool("Throw Mail", throwing);
+            if (m_IsThrowing)
+            {
+                m_Rigidbody.position = new Vector3(m_Rigidbody.position.x, m_Rigidbody.position.y + 0.5f, m_Rigidbody.position.z);
+                m_Rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
+
+            }
+            else
+            {
+                m_Rigidbody.constraints = RigidbodyConstraints.None;
+                m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+
+            }
+            m_IsThrowing = false;
+        }
 
 		public void Move(Vector3 move, bool crouch, bool jump)
 		{
@@ -122,11 +141,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
 			m_Animator.SetBool("Crouch", m_Crouching);
 			m_Animator.SetBool("OnGround", m_IsGrounded);
+            m_Animator.SetBool("Throw Mail", m_IsThrowing);
+
 			if (!m_IsGrounded)
 			{
 				m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
 			}
-
+            if(m_IsThrowing && m_IsGrounded)
+            {
+                m_IsThrowing = true;
+                Throw(m_IsThrowing);
+            }
 			// calculate which leg is behind, so as to leave that leg trailing in the jump animation
 			// (This code is reliant on the specific run cycle offset in our animations,
 			// and assumes one leg passes the other at the normalized clip times of 0.0 and 0.5)

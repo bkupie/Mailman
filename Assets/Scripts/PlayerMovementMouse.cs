@@ -23,6 +23,7 @@ public class PlayerMovementMouse : MonoBehaviour {
         if (rotY > maxLookUpAngle) rotY = maxLookUpAngle;
         if (rotY < maxLookDownAngle) rotY = maxLookDownAngle;
 
+        gameObject.transform.rotation = Quaternion.identity;
         gameObject.transform.rotation = Quaternion.Euler(rotY, rotX, 0.0f);
         //gameObject.transform.parent.transform.rotation = Quaternion.Euler(0, rotX, 0.0f);
             
