@@ -23,7 +23,7 @@ public class Footsteps : MonoBehaviour {
         else if (Input.GetKey(KeyCode.W) && !source.isPlaying) {
             source.PlayDelayed(0.15f);
         }
-	else if (Input.GetKeyDown(KeyCode.W)  && KeyCode.GetKeyDown(KeyCode.LeftShift) && !source.isPlaying && !sprint.isPlaying {
+	else if (Input.GetKeyDown(KeyCode.W)  && KeyCode.GetKeyDown(KeyCode.LeftShift) && !source.isPlaying && !sprint.isPlaying) {
 	    sprint.Play()		
         }
 	}
