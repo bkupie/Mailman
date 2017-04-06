@@ -6,10 +6,12 @@ using UnityStandardAssets.Characters.ThirdPerson;
 public class Footsteps : MonoBehaviour {
 
     AudioSource source;
+    AudioSource sprint;
 
 	// Use this for initialization
 	void Start () {
         source = gameObject.GetComponent<AudioSource>();
+	sprint = gameObject.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +22,9 @@ public class Footsteps : MonoBehaviour {
         }
         else if (Input.GetKey(KeyCode.W) && !source.isPlaying) {
             source.PlayDelayed(0.15f);
+        }
+	else if (Input.GetKeyDown(KeyCode.W)  && KeyCode.GetKeyDown(KeyCode.LeftShift) && !source.isPlaying && !sprint.isPlaying {
+	    sprint.Play()		
         }
 	}
 }
