@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class mailBox : MonoBehaviour {
     
@@ -38,6 +39,11 @@ public class mailBox : MonoBehaviour {
         else if (type == MailboxType.Rebel) {
             factionOpinion.setMilitary(false);
             factionOpinion.setRebel(true);
+        }
+
+        if(score > 14.0f)
+        {
+            SceneManager.LoadScene(4); //this will load our first level from our build settings. "1" is the second scene in our game
         }
     }
 

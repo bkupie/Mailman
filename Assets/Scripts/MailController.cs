@@ -32,12 +32,13 @@ public class MailController : MonoBehaviour
     IEnumerator ThrowMail()
     {
         var savePos = this.transform.position;
-        this.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1);
+       // this.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1);
         float multipler = speed;
         var mail = GameObject.Instantiate(envelope, this.transform.position + transform.forward * 30 * Time.deltaTime, Quaternion.identity) as GameObject;
         var objectCollider = this.GetComponentsInChildren<Collider>();
         mail.GetComponent<Transform>().LookAt(this.transform.position);
         // freeze mail so we can inspect it
+        /*
         mail.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
         // delay for 2 seconds so we can inspect the mail 
 
@@ -47,7 +48,7 @@ public class MailController : MonoBehaviour
         myMail.enabled = false;
         yield return new WaitForSeconds(lengthOfHold);
         mail.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-
+        */
         foreach (var collider in objectCollider)
         {
             Physics.IgnoreCollision(mail.GetComponent<Collider>(), collider);
@@ -56,7 +57,7 @@ public class MailController : MonoBehaviour
         mail.GetComponent<Rigidbody>().velocity = transform.forward * 30 * (float)projectileSpeed;
         mail.GetComponent<Rigidbody>().velocity += Vector3.up * 5 * (float)height;
         yield return new WaitForSeconds(lengthOfHold);
-        this.transform.position = savePos;
+       // this.transform.position = savePos;
 
     }
 
